@@ -1,0 +1,14 @@
+[project]
+name = "generative-learning"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "distrax>=0.1.5",
+    "einops>=0.8.1",
+    "flax>=0.10.6",
+    "jax>=0.6.1",
+    "matplotlib>=3.10.3",
+    "optax>=0.2.4",
+]
