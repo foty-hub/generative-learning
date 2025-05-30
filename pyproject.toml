@@ -8,7 +8,9 @@ dependencies = [
     "distrax>=0.1.5",
     "einops>=0.8.1",
     "flax>=0.10.6",
+    "ipykernel>=6.29.5",
     "jax>=0.6.1",
+    "marimo>=0.13.15",
     "matplotlib>=3.10.3",
     "optax>=0.2.4",
 ]
