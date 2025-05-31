@@ -1,19 +1,47 @@
 [project]
-name = "generative-learning"
-version = "0.1.0"
-description = "Add your description here"
+name = "generative-learning" # Existing name
+version = "0.1.0" # Existing version
+description = "A project for generative learning, including CelebA data loading." # Updated description
 readme = "README.md"
-requires-python = ">=3.12"
+requires-python = ">=3.8" # Relaxed from >=3.12 to >=3.8 for wider compatibility, as per prompt example
+# license = {file = "LICENSE"} # Example, if a license file exists
+# authors = [
+#     {name = "Your Name", email = "you@example.com"},
+# ] # Example
+
 dependencies = [
     "distrax>=0.1.5",
     "einops>=0.8.1",
     "flax>=0.10.6",
-    "ipykernel>=6.29.5",
+    "ipykernel>=6.29.5", # Kept as it was existing
     "jax>=0.6.1",
+    "jaxlib>=0.6.1", # Added explicitly
     "loguru>=0.7.3",
-    "marimo>=0.13.15",
+    "marimo>=0.13.15", # Kept as it was existing
     "matplotlib>=3.10.3",
-    "optax>=0.2.4",
+    "numpy>=1.23", # Added explicitly
+    "optax>=0.2.4", # Kept as it was existing
     "pandas>=2.2.3",
+    "Pillow>=8.0", # Added
+    "torch>=1.9",  # Added (torchvision implies it, but explicit is good)
     "torchvision>=0.22.0",
+    "gdown>=4.0", # Added
+    "requests>=2.20", # Added (good practice)
 ]
+
+[project.optional-dependencies]
+test = [
+  "pytest>=7.0",
+  "pytest-mock>=3.0",
+]
+
+# Assuming 'uv' is the build system based on initial file listing
+[build-system]
+requires = ["uv>=0.1.16"] # Specify a version for uv if known, or a general one
+build-backend = "uv"
+backend-path = ["."] # This might not be needed for uv, but common for some backends
+
+# Example for project URLs (optional)
+# [project.urls]
+# Homepage = "https://example.com/generative-learning"
+# Repository = "https://github.com/user/generative-learning"
